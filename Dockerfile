@@ -32,4 +32,4 @@ COPY start_valheim_server.sh ${VALHEIM_SERVER_DIR}
 WORKDIR ${VALHEIM_SERVER_DIR}
 
 # start the server!
-ENTRYPOINT ["./start_valheim_server.sh"]
+ENTRYPOINT ["bash", "./start_valheim_server.sh"]
