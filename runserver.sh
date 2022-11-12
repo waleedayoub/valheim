@@ -5,4 +5,4 @@ docker run --name=valheim -d \
     --env VALHEIM_SERVER_NAME="EADM" \
     --env VALHEIM_WORLD_NAME="BLIMBLAM" \
     --env VALHEIM_PASSWORD="eadm2022" \
-    valheimserver  
+    thirteen/valheimserver  
