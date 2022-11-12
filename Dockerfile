@@ -28,7 +28,7 @@ EXPOSE 2458/udp
 VOLUME ${VALHEIM_DATA_DIR}
 
 # copy over the modified server start script
-COPY start-valheim-server.sh ${VALHEIM_SERVER_DIR}
+COPY start_valheim_server.sh ${VALHEIM_SERVER_DIR}
 WORKDIR ${VALHEIM_SERVER_DIR}
 
 # start the server!
