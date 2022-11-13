@@ -33,8 +33,7 @@ cd $VALHEIM_SERVER_DIR
 -port $VALHEIM_PORT \
 -world $VALHEIM_WORLD_NAME \
 -password $VALHEIM_PASSWORD \
--savedir $VALHEIM_DATA_DIR &>> /home/steam/steamcmd/valheimserver/valheimdata/valheim-logs.txt \
--crossplay &
+-savedir $VALHEIM_DATA_DIR &>> /home/steam/valheimserver/valheimdata/valheim-logs.txt &
 
 VALHEIM_PID=$!
 echo "Valheim server PID is: $VALHEIM_PID"

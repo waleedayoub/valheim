@@ -1,7 +1,7 @@
 FROM cm2network/steamcmd
 
 # valheim location on the host machine
-ENV VALHEIM_SERVER_DIR="/home/steam/steamcmd/valheimserver"
+ENV VALHEIM_SERVER_DIR="/home/steam/valheimserver"
 
 # install the Valheim server
 RUN ./steamcmd.sh +login anonymous \
@@ -11,14 +11,14 @@ RUN ./steamcmd.sh +login anonymous \
 
 # where world data is stored, map this to the host directory where your worlds are stored
 # e.g. docker run -v /path/to/host/directory:/home/steam/steamcmd/valheimdata
-ENV VALHEIM_DATA_DIR "/home/steam/steamcmd/valheimserver/valheimdata"
+ENV VALHEIM_DATA_DIR "/home/steam/valheimserver/valheimdata"
 # keep port on 2456
 ENV VALHEIM_PORT 2456
 # server and world name are truncated after 1st white space
 # you must set values to the server and world name otherwise the container will exit immediately
-ENV VALHEIM_SERVER_NAME="EADM"
-ENV VALHEIM_WORLD_NAME="BLIMBLAM"
-ENV VALHEIM_PASSWORD "eadm2022"
+ENV VALHEIM_SERVER_NAME=""
+ENV VALHEIM_WORLD_NAME=""
+ENV VALHEIM_PASSWORD "password"
 
 # the server needs these 3 ports exposed by default
 EXPOSE 2456/udp
